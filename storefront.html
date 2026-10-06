@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#e9efe1">
+  <title>TASTE OF NATIVES — Village-made, made with care</title>
+  <link rel="stylesheet" href="storefront.css">
+</head>
+<body>
+  <header class="shop-header">
+    <a class="shop-brand" href="#home" aria-label="TASTE OF NATIVES home">
+      <img class="shop-brand-mark" src="logo.jpeg" alt="">
+      <span>TASTE OF NATIVES<span class="brand-period">.</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#collection">Shop</a>
+      <a href="#story">Our approach</a>
+    </nav>
+    <div class="header-actions">
+      <button class="track-button" id="open-order-tracker" type="button" aria-haspopup="dialog" aria-controls="cart-dialog">Track order</button>
+      <a class="studio-link" href="design.html">Studio</a>
+      <button class="bag-button" id="open-cart" type="button" aria-haspopup="dialog" aria-controls="cart-dialog">
+        Bag <span id="cart-count" class="bag-count" aria-live="polite">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> A little village, a lot of heart</p>
+        <h1 id="hero-title">TASTE<br><em>OF NATIVES</em></h1>
+        <p class="hero-description">Discover village-made treasures, rooted in tradition and made with care by the hands and hearts of local makers.</p>
+        <a class="hero-cta" href="#collection">Explore village finds <span aria-hidden="true">↓</span></a>
+        <div class="hero-note"><span aria-hidden="true">✳</span> Made by local hands. Shared with love.</div>
+      </div>
+      <div class="hero-art" role="img" aria-label="A display of palm jaggery, pure honey, millets, and several rice varieties">
+        <svg class="village-scene" viewBox="0 0 720 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="village-sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#d9e9d8"></stop>
+              <stop offset="1" stop-color="#f2dfb7"></stop>
+            </linearGradient>
+            <linearGradient id="village-field" x1="0" y1="0" x2="0.8" y2="1">
+              <stop offset="0" stop-color="#9eaa72"></stop>
+              <stop offset="1" stop-color="#647c51"></stop>
+            </linearGradient>
+            <linearGradient id="village-house" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#e5cba1"></stop>
+              <stop offset="1" stop-color="#bd9268"></stop>
+            </linearGradient>
+          </defs>
+          <rect width="720" height="560" fill="url(#village-sky)"></rect>
+          <circle class="village-sun" cx="546" cy="134" r="58" fill="#e9ba72" opacity=".9"></circle>
+          <path class="village-hill village-hill-back" d="M0 275 Q110 180 226 251 T470 235 T720 230 V560 H0Z" fill="#a9b99a"></path>
+          <path class="village-hill village-hill-middle" d="M0 329 Q130 235 278 303 T522 275 T720 289 V560 H0Z" fill="#7f996f"></path>
+          <path d="M0 365 Q156 286 320 350 T590 325 T720 340 V560 H0Z" fill="url(#village-field)"></path>
+          <path d="M0 454 Q178 377 351 431 T720 411 V560 H0Z" fill="#738657"></path>
+          <path d="M0 498 Q178 423 367 477 T720 459" fill="none" stroke="#d5c58b" stroke-width="5" opacity=".75"></path>
+          <path d="M0 526 Q185 454 378 511 T720 491" fill="none" stroke="#c7bd7e" stroke-width="4" opacity=".65"></path>
+          <g class="village-houses">
+            <g transform="translate(126 286)">
+              <path d="M0 53 53 10 111 53V120H0Z" fill="url(#village-house)"></path>
+              <path d="M-9 55 53 4 120 55 110 63 53 20 0 64Z" fill="#765843"></path>
+              <rect x="43" y="76" width="25" height="44" rx="12" fill="#70533f"></rect>
+              <rect x="12" y="69" width="20" height="22" fill="#829272"></rect>
+            </g>
+            <g transform="translate(300 277) scale(.82)">
+              <path d="M0 53 53 10 111 53V120H0Z" fill="#d8bd91"></path>
+              <path d="M-9 55 53 4 120 55 110 63 53 20 0 64Z" fill="#795b42"></path>
+              <rect x="43" y="76" width="25" height="44" rx="12" fill="#755640"></rect>
+              <rect x="12" y="69" width="20" height="22" fill="#8d9774"></rect>
+            </g>
+            <g transform="translate(477 298) scale(.72)">
+              <path d="M0 53 53 10 111 53V120H0Z" fill="#e4c89a"></path>
+              <path d="M-9 55 53 4 120 55 110 63 53 20 0 64Z" fill="#795b42"></path>
+              <rect x="43" y="76" width="25" height="44" rx="12" fill="#70533f"></rect>
+              <rect x="12" y="69" width="20" height="22" fill="#889575"></rect>
+            </g>
+          </g>
+          <g fill="#4f7253">
+            <circle cx="102" cy="306" r="41"></circle><circle cx="82" cy="325" r="29"></circle><circle cx="126" cy="326" r="33"></circle>
+            <circle cx="601" cy="290" r="46"></circle><circle cx="575" cy="311" r="31"></circle><circle cx="629" cy="318" r="34"></circle>
+          </g>
+          <g fill="#72543c">
+            <path d="M96 319h12v65H96z"></path><path d="M595 310h13v83h-13z"></path>
+          </g>
+          <g fill="#e9d5a8" opacity=".8">
+            <path d="m49 436 14-28 14 28z"></path><path d="m661 421 12-24 12 24z"></path>
+            <path d="m405 461 10-20 10 20z"></path>
+          </g>
+          <text x="36" y="519" fill="#fffaf0" font-family="Georgia, serif" font-size="17" font-style="italic">Handmade in the village, with love</text>
+        </svg>
+      </div>
+    </section>
+
+    <section class="collection" id="collection" aria-labelledby="collection-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">From our village to your home</p>
+          <h2 id="collection-title">Made with roots. Chosen by you.</h2>
+          <p class="section-description">Explore thoughtful goods crafted by local hands and inspired by village life.</p>
+        </div>
+        <label class="search-box">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+          <input id="product-search" type="search" placeholder="Search the collection" aria-label="Search the collection">
+        </label>
+      </div>
+      <p class="collection-meta" id="collection-meta" aria-live="polite"></p>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="story" id="story">
+      <span class="story-mark" aria-hidden="true">✳</span>
+      <div>
+        <p class="eyebrow">Rooted in community</p>
+        <h2>Every piece carries a little home.</h2>
+      </div>
+      <p>Our collection celebrates village craft, local makers, and traditions passed from one generation to the next. Every purchase helps keep those stories alive.</p>
+    </section>
+  </main>
+
+  <footer class="shop-footer">
+    <a class="shop-brand footer-brand" href="#home"><img class="shop-brand-mark" src="logo.jpeg" alt=""><span>TASTE OF NATIVES<span class="brand-period">.</span></span></a>
+    <span>Village-made treasures, made with care.</span>
+    <a href="design.html">Manage your shop <span aria-hidden="true">↗</span></a>
+  </footer>
+
+  <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+    <div class="cart-header">
+      <div>
+        <p class="eyebrow" id="cart-eyebrow">Your picks</p>
+        <h2 id="cart-title">Shopping bag</h2>
+      </div>
+      <button class="close-cart" id="close-cart" type="button" aria-label="Close shopping bag">×</button>
+    </div>
+    <form class="track-order-form" id="track-order-form" hidden>
+      <p class="track-order-intro">Enter the 8-character order reference and the mobile number used at checkout.</p>
+      <label for="order-reference">Order reference</label>
+      <input id="order-reference" name="orderReference" type="text" minlength="8" maxlength="8" autocomplete="off" pattern="[a-zA-Z0-9-]{8}" required>
+      <label for="tracking-phone">Mobile number</label>
+      <input id="tracking-phone" name="phone" type="tel" inputmode="numeric" pattern="[6-9][0-9]{9}" maxlength="10" autocomplete="tel-national" required>
+      <button class="checkout-button track-submit" type="submit">Check order status</button>
+      <p class="track-order-result" id="track-order-result" role="status" aria-live="polite"></p>
+      <p class="address-disclaimer">Order tracking is available only in the same browser/device in this demo.</p>
+    </form>
+    <div class="cart-items" id="cart-items"></div>
+    <form class="address-form" id="address-form" hidden>
+      <p class="address-intro">Enter your delivery details to place the demo order. An order reference is generated automatically after you submit; you do not need to enter one here. Details are saved in this browser on this device so they can be viewed in Product Studio.</p>
+      <div class="address-fields">
+        <div class="address-field">
+          <label for="customer-name">Full name</label>
+          <input id="customer-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+        </div>
+        <div class="address-field">
+          <label for="customer-phone">Mobile number</label>
+          <input id="customer-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" pattern="[6-9][0-9]{9}" maxlength="10" placeholder="10-digit mobile number" title="Enter a valid 10-digit Indian mobile number" required>
+        </div>
+        <div class="address-field address-field-wide">
+          <label for="customer-address">House, street, or village address</label>
+          <textarea id="customer-address" name="streetAddress" autocomplete="street-address" maxlength="240" required></textarea>
+        </div>
+        <div class="address-field">
+          <label for="customer-town">Village / town / city</label>
+          <input id="customer-town" name="town" type="text" autocomplete="address-level2" maxlength="80" required>
+        </div>
+        <div class="address-field">
+          <label for="customer-district">District</label>
+          <input id="customer-district" name="district" type="text" maxlength="80" required>
+        </div>
+        <div class="address-field">
+          <label for="customer-state">State</label>
+          <input id="customer-state" name="state" type="text" autocomplete="address-level1" maxlength="80" required>
+        </div>
+        <div class="address-field">
+          <label for="customer-postal-code">PIN code</label>
+          <input id="customer-postal-code" name="postalCode" type="text" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{6}" maxlength="6" placeholder="6-digit PIN code" title="Enter a valid 6-digit Indian PIN code" required>
+        </div>
+      </div>
+      <p class="address-message" id="address-message" role="status" aria-live="polite"></p>
+      <div class="order-reference-confirmation" id="order-reference-confirmation" hidden>
+        <span>Save this order reference for tracking:</span>
+        <strong id="placed-order-reference"></strong>
+      </div>
+      <div class="address-actions">
+        <button class="address-back-button" id="back-to-bag" type="button">Back to bag</button>
+        <button class="checkout-button address-submit" type="submit">Place demo order</button>
+      </div>
+      <p class="address-disclaimer">Demo only: no payment or delivery service is connected. Do not enter sensitive personal information.</p>
+    </form>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Subtotal</span><strong id="cart-total">₹0.00</strong></div>
+      <p class="checkout-note" id="checkout-note">Shipping and taxes are calculated at checkout.</p>
+      <button class="checkout-button" id="checkout-button" type="button" disabled>Add delivery address</button>
+      <p class="demo-note">Demo checkout. Orders are saved locally on this device.</p>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (() => {
+      const STORAGE_KEY = "product-studio-products-v1";
+      const grid = document.getElementById("product-grid");
+      const searchInput = document.getElementById("product-search");
+      const collectionMeta = document.getElementById("collection-meta");
+      const dialog = document.getElementById("cart-dialog");
+      const cartItems = document.getElementById("cart-items");
+      const cartCount = document.getElementById("cart-count");
+      const cartTotal = document.getElementById("cart-total");
+      const checkoutButton = document.getElementById("checkout-button");
+      const cartTitle = document.getElementById("cart-title");
+      const cartEyebrow = document.getElementById("cart-eyebrow");
+      const cartFooter = document.querySelector(".cart-footer");
+      const addressForm = document.getElementById("address-form");
+      const trackOrderForm = document.getElementById("track-order-form");
+      const trackOrderResult = document.getElementById("track-order-result");
+      const addressMessage = document.getElementById("address-message");
+      const orderReferenceConfirmation = document.getElementById("order-reference-confirmation");
+      const placedOrderReference = document.getElementById("placed-order-reference");
+      const addressSubmit = addressForm.querySelector(".address-submit");
+      const toast = document.getElementById("toast");
+      let products = [];
+      let catalogError = "";
+      const cart = new Map();
+      let toastTimer;
+
+      function formatPrice(price) {
+        return new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR" }).format(Number(price));
+      }
+
+      function loadProducts() {
+        try {
+          const saved = localStorage.getItem(STORAGE_KEY);
+          const parsed = saved ? JSON.parse(saved) : [];
+          if (!Array.isArray(parsed)) throw new Error("Saved catalog data is not a product list.");
+          catalogError = "";
+          return parsed.filter((item) =>
+            item && typeof item.id === "string" && typeof item.name === "string" &&
+            Number.isFinite(Number(item.price)) && Number(item.price) >= 0
+          );
+        } catch (error) {
+          console.error("Could not load the saved catalog.", error);
+          catalogError = "The collection could not be loaded.";
+          return [];
+        }
+      }
+
+      function createPlaceholder() {
+        const placeholder = document.createElement("div");
+        placeholder.className = "product-placeholder";
+        placeholder.setAttribute("aria-hidden", "true");
+        placeholder.innerHTML = '<span>✳</span>';
+        return placeholder;
+      }
+
+      function renderProducts() {
+        const query = searchInput.value.trim().toLocaleLowerCase();
+        const filtered = products.filter((product) =>
+          product.name.toLocaleLowerCase().includes(query) ||
+          (typeof product.description === "string" && product.description.toLocaleLowerCase().includes(query))
+        );
+        grid.replaceChildren();
+        if (catalogError) {
+          collectionMeta.textContent = catalogError;
+          const empty = document.createElement("div");
+          empty.className = "empty-collection";
+          const title = document.createElement("h3");
+          title.textContent = "The collection is unavailable.";
+          const message = document.createElement("p");
+          message.textContent = "Please refresh the page or try again later.";
+          empty.append(title, message);
+          grid.appendChild(empty);
+          return;
+        }
+        collectionMeta.textContent = `${filtered.length} ${filtered.length === 1 ? "piece" : "pieces"}${query ? " found" : " in the collection"}`;
+
+        if (filtered.length === 0) {
+          const empty = document.createElement("div");
+          empty.className = "empty-collection";
+          const icon = document.createElement("span");
+          icon.className = "empty-collection-icon";
+          icon.textContent = query ? "⌕" : "✳";
+          const title = document.createElement("h3");
+          title.textContent = query ? "Nothing found just yet." : "The shelves are getting ready.";
+          const message = document.createElement("p");
+          message.textContent = query
+            ? "Try a different search to find your new favorite."
+            : "Our collection will appear here as soon as it's ready.";
+          empty.append(icon, title, message);
+          grid.appendChild(empty);
+          return;
+        }
+
+        for (const product of filtered) {
+          const card = document.createElement("article");
+          card.className = "product-card";
+          const imageWrap = document.createElement("div");
+          imageWrap.className = "product-image";
+          if (typeof product.image === "string" && product.image) {
+            const image = document.createElement("img");
+            image.src = product.image;
+            image.alt = product.name;
+            image.loading = "lazy";
+            image.addEventListener("error", () => imageWrap.replaceChildren(createPlaceholder()), { once: true });
+            imageWrap.appendChild(image);
+          } else {
+            imageWrap.appendChild(createPlaceholder());
+          }
+
+          const info = document.createElement("div");
+          info.className = "product-info";
+          const name = document.createElement("h3");
+          name.className = "product-name";
+          name.textContent = product.name;
+          const description = document.createElement("p");
+          description.className = "product-description";
+          description.textContent = product.description || "A lovely little something for your everyday.";
+          const price = document.createElement("p");
+          price.className = "product-price";
+          price.textContent = formatPrice(product.price);
+          const available = isAvailable(product);
+          const availability = document.createElement("p");
+          availability.className = `product-availability${available ? "" : " out-of-stock"}`;
+          availability.textContent = available ? "Available" : "Out of stock";
+          info.append(name, description, price, availability);
+
+          const purchaseControls = document.createElement("div");
+          purchaseControls.className = "purchase-controls";
+          const quantityLabel = document.createElement("label");
+          quantityLabel.className = "quantity-label";
+          quantityLabel.textContent = "Qty";
+          const quantityInput = document.createElement("input");
+          quantityInput.className = "card-quantity-input";
+          quantityInput.type = "number";
+          quantityInput.min = "1";
+          quantityInput.step = "1";
+          quantityInput.value = "1";
+          quantityInput.disabled = !available;
+          quantityInput.setAttribute("aria-label", `Quantity of ${product.name} to add`);
+          quantityLabel.htmlFor = `quantity-${product.id}`;
+          quantityInput.id = `quantity-${product.id}`;
+          purchaseControls.append(quantityLabel, quantityInput);
+
+          const purchaseActions = document.createElement("div");
+          purchaseActions.className = "purchase-actions";
+
+          const addButton = document.createElement("button");
+          addButton.className = "add-button";
+          addButton.type = "button";
+          addButton.textContent = available ? "Add to bag" : "Out of stock";
+          addButton.disabled = !available;
+          addButton.setAttribute("aria-label", available ? `Add ${product.name} to bag` : `${product.name} is out of stock`);
+          addButton.addEventListener("click", () => addToCart(product, Number(quantityInput.value)));
+
+          const buyButton = document.createElement("button");
+          buyButton.className = "buy-button";
+          buyButton.type = "button";
+          buyButton.textContent = available ? "Buy now" : "Out of stock";
+          buyButton.disabled = !available;
+          buyButton.setAttribute("aria-label", available ? `Buy ${product.name} now` : `${product.name} is out of stock`);
+          buyButton.addEventListener("click", () => buyNow(product, Number(quantityInput.value)));
+
+          purchaseActions.append(addButton, buyButton);
+          card.style.setProperty("--card-index", String(grid.children.length));
+          card.append(imageWrap, info, purchaseControls, purchaseActions);
+          grid.appendChild(card);
+        }
+      }
+
+      function isAvailable(product) {
+        if (product.availability === "available") return true;
+        if (product.availability === "out-of-stock") return false;
+        return Number(product.quantity) > 0;
+      }
+
+      function addToCart(product, requestedQuantity = 1) {
+        const currentProduct = products.find((item) => item.id === product.id);
+        if (!currentProduct) return;
+        if (!Number.isInteger(requestedQuantity) || requestedQuantity < 1) {
+          showToast("Choose a valid quantity.");
+          return;
+        }
+        const item = cart.get(product.id);
+        const currentQuantity = item ? item.quantity : 0;
+        if (!isAvailable(currentProduct)) {
+          showToast("This product is out of stock.");
+          return;
+        }
+        cart.set(product.id, { product: currentProduct, quantity: currentQuantity + requestedQuantity });
+        renderCart();
+        renderProducts();
+        showToast(`${currentProduct.name} added to your bag`);
+      }
+
+      function buyNow(product, requestedQuantity = 1) {
+        addToCart(product, requestedQuantity);
+        showAddressForm();
+        dialog.showModal();
+      }
+
+      function changeQuantity(id, amount) {
+        const item = cart.get(id);
+        if (!item) return;
+        const quantity = item.quantity + amount;
+        if (quantity <= 0) cart.delete(id);
+        else if (isAvailable(item.product)) cart.set(id, { ...item, quantity });
+        else return;
+        renderCart();
+        renderProducts();
+      }
+
+      function renderCart() {
+        cartItems.replaceChildren();
+        const items = [...cart.values()];
+        const count = items.reduce((sum, item) => sum + item.quantity, 0);
+        const total = items.reduce((sum, item) => sum + Number(item.product.price) * item.quantity, 0);
+        cartCount.textContent = String(count);
+        cartTotal.textContent = formatPrice(total);
+        checkoutButton.disabled = count === 0;
+
+        if (items.length === 0) {
+          const empty = document.createElement("div");
+          empty.className = "cart-empty";
+          empty.innerHTML = '<span aria-hidden="true">✳</span><h3>Your bag is taking a breather.</h3><p>When something catches your eye, you can find it here.</p>';
+          cartItems.appendChild(empty);
+          return;
+        }
+
+        for (const { product, quantity } of items) {
+          const row = document.createElement("article");
+          row.className = "cart-item";
+          const image = document.createElement("div");
+          image.className = "cart-item-image";
+          if (typeof product.image === "string" && product.image) {
+            const img = document.createElement("img");
+            img.src = product.image;
+            img.alt = "";
+            img.addEventListener("error", () => image.replaceChildren(createPlaceholder()), { once: true });
+            image.appendChild(img);
+          } else {
+            image.appendChild(createPlaceholder());
+          }
+
+          const details = document.createElement("div");
+          details.className = "cart-item-details";
+          const name = document.createElement("h3");
+          name.textContent = product.name;
+          const price = document.createElement("p");
+          price.textContent = formatPrice(product.price);
+          const controls = document.createElement("div");
+          controls.className = "quantity-controls";
+          const decrement = document.createElement("button");
+          decrement.type = "button";
+          decrement.textContent = "−";
+          decrement.setAttribute("aria-label", `Remove one ${product.name}`);
+          decrement.addEventListener("click", () => changeQuantity(product.id, -1));
+          const quantityLabel = document.createElement("span");
+          quantityLabel.textContent = String(quantity);
+          const increment = document.createElement("button");
+          increment.type = "button";
+          increment.textContent = "+";
+          increment.setAttribute("aria-label", `Add one ${product.name}`);
+          increment.disabled = !isAvailable(product);
+          increment.addEventListener("click", () => changeQuantity(product.id, 1));
+          controls.append(decrement, quantityLabel, increment);
+          details.append(name, price, controls);
+          row.append(image, details);
+          cartItems.appendChild(row);
+        }
+      }
+
+      function showBag() {
+        cartTitle.textContent = "Shopping bag";
+        cartEyebrow.textContent = "Your picks";
+        cartItems.hidden = false;
+        cartFooter.hidden = false;
+        addressForm.hidden = true;
+        trackOrderForm.hidden = true;
+      }
+
+      function showOrderTracker() {
+        cartTitle.textContent = "Track your order";
+        cartEyebrow.textContent = "Order updates";
+        cartItems.hidden = true;
+        cartFooter.hidden = true;
+        addressForm.hidden = true;
+        trackOrderResult.textContent = "";
+        trackOrderForm.hidden = false;
+        document.getElementById("order-reference").focus();
+      }
+
+      function showAddressForm() {
+        cartTitle.textContent = "Delivery address";
+        cartEyebrow.textContent = "Where should we send it?";
+        cartItems.hidden = true;
+        cartFooter.hidden = true;
+        trackOrderForm.hidden = true;
+        addressMessage.textContent = "";
+        orderReferenceConfirmation.hidden = true;
+        placedOrderReference.textContent = "";
+        addressSubmit.textContent = "Place demo order";
+        addressSubmit.disabled = false;
+        addressForm.hidden = false;
+        addressForm.querySelector("input").focus();
+      }
+
+      function showToast(message) {
+        window.clearTimeout(toastTimer);
+        toast.textContent = message;
+        toast.classList.add("visible");
+        toastTimer = window.setTimeout(() => toast.classList.remove("visible"), 2400);
+      }
+
+      document.getElementById("open-cart").addEventListener("click", () => {
+        showBag();
+        dialog.showModal();
+      });
+      document.getElementById("open-order-tracker").addEventListener("click", () => {
+        showOrderTracker();
+        dialog.showModal();
+      });
+      document.getElementById("close-cart").addEventListener("click", () => dialog.close());
+      document.getElementById("back-to-bag").addEventListener("click", showBag);
+      dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+      checkoutButton.addEventListener("click", () => {
+        showAddressForm();
+      });
+      trackOrderForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (!trackOrderForm.reportValidity()) return;
+        const reference = document.getElementById("order-reference").value.trim().toLocaleLowerCase();
+        const phone = document.getElementById("tracking-phone").value.trim();
+        try {
+          const saved = localStorage.getItem("product-studio-orders-v1");
+          const orders = saved ? JSON.parse(saved) : [];
+          if (!Array.isArray(orders)) throw new Error("Saved order data is not an order list.");
+          const order = orders.find((item) =>
+            item && typeof item.id === "string" &&
+            String(item.reference || item.id.slice(0, 8)).toLocaleLowerCase() === reference &&
+            item.customer && item.customer.phone === phone
+          );
+          if (!order) {
+            trackOrderResult.textContent = "We could not find an order matching those details.";
+            return;
+          }
+          const customerStatus = {
+            New: "Received — waiting for the shop to confirm.",
+            Confirmed: "Confirmed — the shop has accepted your order.",
+            Ignored: "Not accepted — the shop did not accept this order.",
+            Processing: "Confirmed — your order is being prepared.",
+            Shipped: "Confirmed — your order has been shipped.",
+            Completed: "Completed — your order is marked complete."
+          };
+          trackOrderResult.textContent =
+            `${customerStatus[order.status] || "Order status updated."} ` +
+            `Reference: ${order.id.slice(0, 8).toUpperCase()}.`;
+        } catch (error) {
+          console.error("Could not check customer order status.", error);
+          trackOrderResult.textContent = "Order status could not be checked in this browser.";
+        }
+      });
+      addressForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (!addressForm.reportValidity()) return;
+        const items = [...cart.values()];
+        if (items.length === 0) {
+          addressMessage.textContent = "Your bag is empty. Add an available product before placing an order.";
+          return;
+        }
+
+        const formData = new FormData(addressForm);
+        const hasRandomUUID = window.crypto && typeof window.crypto.randomUUID === "function";
+        const orderId = hasRandomUUID
+          ? window.crypto.randomUUID()
+          : `${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+        const orderReference = hasRandomUUID
+          ? orderId.replace(/[^a-z0-9]/gi, "").slice(0, 8).toUpperCase()
+          : Math.random().toString(36).slice(2, 10).toUpperCase().padEnd(8, "0");
+        const order = {
+          id: orderId,
+          reference: orderReference,
+          createdAt: new Date().toISOString(),
+          status: "New",
+          items: items.map(({ product, quantity }) => ({
+            id: product.id,
+            name: product.name,
+            price: Number(product.price),
+            quantity
+          })),
+          total: items.reduce((sum, item) => sum + Number(item.product.price) * item.quantity, 0),
+          customer: {
+            name: String(formData.get("name") || "").trim(),
+            phone: String(formData.get("phone") || "").trim(),
+            streetAddress: String(formData.get("streetAddress") || "").trim(),
+            town: String(formData.get("town") || "").trim(),
+            district: String(formData.get("district") || "").trim(),
+            state: String(formData.get("state") || "").trim(),
+            postalCode: String(formData.get("postalCode") || "").trim()
+          }
+        };
+
+        try {
+          const savedOrders = localStorage.getItem("product-studio-orders-v1");
+          const orders = savedOrders ? JSON.parse(savedOrders) : [];
+          if (!Array.isArray(orders)) throw new Error("Saved order data is not an order list.");
+          localStorage.setItem("product-studio-orders-v1", JSON.stringify([order, ...orders]));
+        } catch (error) {
+          console.error("Could not save customer order in this browser.", error);
+          addressMessage.textContent = "The order could not be saved in this browser. Please try again.";
+          return;
+        }
+
+        addressMessage.textContent = "Your order was placed. The shop owner can view it in Product Studio on this device.";
+        placedOrderReference.textContent = order.reference;
+        orderReferenceConfirmation.hidden = false;
+        addressSubmit.textContent = "Order placed";
+        addressSubmit.disabled = true;
+        cart.clear();
+        renderCart();
+      });
+      searchInput.addEventListener("input", renderProducts);
+      window.addEventListener("storage", (event) => {
+        if (event.key === STORAGE_KEY || event.key === null) {
+          products = loadProducts();
+          for (const [id, item] of cart) {
+            const currentProduct = products.find((product) => product.id === id);
+            if (!currentProduct || !isAvailable(currentProduct)) {
+              cart.delete(id);
+              continue;
+            }
+            cart.set(id, { product: currentProduct, quantity: item.quantity });
+          }
+          renderProducts();
+          renderCart();
+        }
+      });
+
+      products = loadProducts();
+      renderProducts();
+      renderCart();
+    })();
+  </script>
+</body>
+</html>
